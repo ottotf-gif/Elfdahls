@@ -46,3 +46,18 @@
   background-image: radial-gradient(rgba(80, 60, 40, 0.04) 1px, transparent 1px);
   background-size: 4px 4px;
 }
+
+/* Självgående, oändlig värderingskarusell */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Flytta exakt halva bredden (listan är dubblerad) = sömlös loop */
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 28s linear infinite;
+}
