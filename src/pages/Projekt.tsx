@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { projekt } from '../data/content';
 
 const bildPerKategori: Record<string, string[]> = {
-  Möbler: ['/Mobler1.jpeg', '/Mobler2.jpeg', '/Mobler3.jpeg', '/Mobler4.jpeg', '/Mobler5.jpeg', '/Mobler6.jpeg'],
-  Specialsnickeri: ['/Mobler3.jpeg', '/Mobler5.jpeg'],
-  Garderober: ['/Kok5.jpg', '/Kok7.jpg'],
-  'Butik & kontor': ['/Butik1.jpg', '/Butik2.jpg', '/Butik3.jpg', '/Butik4.jpg', '/Butik5.jpg', '/Butik6.jpg', '/Butik7.jpg', '/Butik8.jpg', '/Butik9.jpg'],
+  Möbler: ['/Mobler1.jpeg', '/Mobler3.jpeg', '/Mobler6.jpeg'],
+  Specialsnickeri: ['/Mobler3.jpeg', '/Mobler6.jpeg'],
+  Garderober: ['/Kok5.jpg', '/Kok3.jpeg'],
+  'Butik & kontor': ['/Butik2.jpg', '/Butik8.jpg', '/Butik9.jpg'],
 };
 
 const ordning = ['Möbler', 'Kök & garderober', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];

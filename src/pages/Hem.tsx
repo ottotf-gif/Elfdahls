@@ -9,8 +9,8 @@ interface HemProps {
 // Platshållarbilder per tjänst på startsidan (byt mot deras egna i public/)
 const kortbild: Record<string, string> = {
   mobler: '/Mobler1.jpeg',
-  kok: '/Kok1.jpeg',
-  butik: '/Butik1.jpg',
+  kok: '/Kok2.jpeg',
+  butik: '/Butik2.jpg',
   ritning: '/3d1.jpeg',
 };
 

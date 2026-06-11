@@ -54,10 +54,7 @@ export const tjanster: Tjanst[] = [
     ],
     bilder: [
       '/Mobler1.jpeg',
-      '/Mobler2.jpeg',
       '/Mobler3.jpeg',
-      '/Mobler4.jpeg',
-      '/Mobler5.jpeg',
       '/Mobler6.jpeg',
     ],
   },
@@ -71,13 +68,9 @@ export const tjanster: Tjanst[] = [
       'Med CNC-programmering och proffsiga underlag har vi tagit fram en serie kök och garderober med inredning som är flexibel och går att bygga utifrån era mått. Vi ritar upp ett gemensamt förslag på ert kök eller era garderober. Utifrån det kan vi använda 3D-ritningarna till att göra underlag med endast några knapptryckningar, och sen är tillverkningen igång på riktigt.',
     ],
     bilder: [
-      '/Kok1.jpeg',
       '/Kok2.jpeg',
       '/Kok3.jpeg',
-      '/Kok4.jpeg',
       '/Kok5.jpg',
-      '/Kok6.gif',
-      '/Kok7.jpg',
     ],
   },
   {
@@ -90,13 +83,7 @@ export const tjanster: Tjanst[] = [
       'Vi arbetar med väl kända arkitekter som har helhetslösningar, där vi är med och förverkligar idéer och ritningar till färdig produkt.',
     ],
     bilder: [
-      '/Butik1.jpg',
       '/Butik2.jpg',
-      '/Butik3.jpg',
-      '/Butik4.jpg',
-      '/Butik5.jpg',
-      '/Butik6.jpg',
-      '/Butik7.jpg',
       '/Butik8.jpg',
       '/Butik9.jpg',
     ],
@@ -113,9 +100,6 @@ export const tjanster: Tjanst[] = [
     bilder: [
       '/3d1.jpeg',
       '/3d2.jpeg',
-      '/3d3.jpeg',
-      '/3d4.jpeg',
-      '/3d5.jpeg',
       '/3d6.jpeg',
     ],
   },
