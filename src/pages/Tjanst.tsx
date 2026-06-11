@@ -62,8 +62,8 @@ export default function Tjanst({ tjanstId, navigera, oppnaTjanst }: TjanstProps)
             Vill du veta mer om {tjanst.titel.toLowerCase()}?
           </h2>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <button onClick={() => navigera('boka')} className="knapp-primar bg-massing text-grafit-950 hover:bg-massing-ljus">
-              Boka ett möte
+            <button onClick={() => navigera('kontakt')} className="knapp-primar bg-massing text-grafit-950 hover:bg-massing-ljus">
+              Kontakta oss
             </button>
             <button
               onClick={() => navigera('kontakt')}

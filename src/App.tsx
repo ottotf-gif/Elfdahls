@@ -4,11 +4,10 @@ import Footer from './components/Footer';
 import Hem from './pages/Hem';
 import Om from './pages/Om';
 import Projekt from './pages/Projekt';
-import Boka from './pages/Boka';
 import Kontakt from './pages/Kontakt';
 import Tjanst from './pages/Tjanst';
 
-type Sida = 'hem' | 'om' | 'projekt' | 'boka' | 'kontakt' | 'tjanst';
+type Sida = 'hem' | 'om' | 'projekt' | 'kontakt' | 'tjanst';
 
 export default function App() {
   const [sida, setSida] = useState<Sida>('hem');
@@ -31,7 +30,7 @@ export default function App() {
   // Stöd för #hash-länkar
   useEffect(() => {
     const hash = window.location.hash.replace('#', '');
-    if (['hem', 'om', 'projekt', 'boka', 'kontakt'].includes(hash)) {
+    if (['hem', 'om', 'projekt', 'kontakt'].includes(hash)) {
       setSida(hash as Sida);
     }
   }, []);
@@ -47,7 +46,6 @@ export default function App() {
         {sida === 'hem' && <Hem navigera={navigera} oppnaTjanst={oppnaTjanst} />}
         {sida === 'om' && <Om />}
         {sida === 'projekt' && <Projekt />}
-        {sida === 'boka' && <Boka />}
         {sida === 'kontakt' && <Kontakt navigera={navigera} />}
         {sida === 'tjanst' && (
           <Tjanst

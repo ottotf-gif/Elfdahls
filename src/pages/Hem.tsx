@@ -49,10 +49,10 @@ export default function Hem({ navigera, oppnaTjanst }: HemProps) {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <button
-                onClick={() => navigera('boka')}
+                onClick={() => navigera('kontakt')}
                 className="knapp-primar bg-massing text-grafit-950 hover:bg-massing-ljus"
               >
-                Boka ett möte
+                Kontakta oss
               </button>
               <button
                 onClick={() => navigera('projekt')}
@@ -171,10 +171,10 @@ export default function Hem({ navigera, oppnaTjanst }: HemProps) {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => navigera('boka')}
+              onClick={() => navigera('kontakt')}
               className="knapp-primar bg-massing text-grafit-950 hover:bg-massing-ljus"
             >
-              Boka ett möte
+              Kontakta oss
             </button>
             <button
               onClick={() => navigera('kontakt')}

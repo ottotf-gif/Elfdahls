@@ -199,7 +199,6 @@ export const navlankar = [
   { label: 'Hem', href: '#hem', sida: 'hem' as const },
   { label: 'Om oss', href: '#om', sida: 'om' as const },
   { label: 'Projekt', href: '#projekt', sida: 'projekt' as const },
-  { label: 'Boka', href: '#boka', sida: 'boka' as const },
   { label: 'Kontakt', href: '#kontakt', sida: 'kontakt' as const },
 ];
 
