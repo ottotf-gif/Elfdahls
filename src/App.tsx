@@ -6,11 +6,14 @@ import Om from './pages/Om';
 import Projekt from './pages/Projekt';
 import Boka from './pages/Boka';
 import Kontakt from './pages/Kontakt';
+import Tjanst from './pages/Tjanst';
 
-type Sida = 'hem' | 'om' | 'projekt' | 'boka' | 'kontakt';
+type Sida = 'hem' | 'om' | 'projekt' | 'boka' | 'kontakt' | 'tjanst';
 
 export default function App() {
   const [sida, setSida] = useState<Sida>('hem');
+  // Vilken tjänst som visas på tjänstesidan
+  const [tjanstId, setTjanstId] = useState<string>('mobler');
 
   // Enkel routing via state. Scrolla till toppen vid sidbyte.
   const navigera = (ny: string) => {
@@ -18,7 +21,14 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Stöd för #hash-länkar (t.ex. om någon delar /#projekt)
+  // Öppna en specifik tjänst (från korten på startsidan)
+  const oppnaTjanst = (id: string) => {
+    setTjanstId(id);
+    setSida('tjanst');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Stöd för #hash-länkar
   useEffect(() => {
     const hash = window.location.hash.replace('#', '');
     if (['hem', 'om', 'projekt', 'boka', 'kontakt'].includes(hash)) {
@@ -26,16 +36,26 @@ export default function App() {
     }
   }, []);
 
+  // Header markerar "Hem" som aktiv även när man är inne på en tjänst
+  const aktivSida = sida === 'tjanst' ? 'hem' : sida;
+
   return (
     <div className="flex min-h-screen flex-col">
-      <Header aktivSida={sida} navigera={navigera} />
+      <Header aktivSida={aktivSida} navigera={navigera} />
 
       <main className="flex-1">
-        {sida === 'hem' && <Hem navigera={navigera} />}
+        {sida === 'hem' && <Hem navigera={navigera} oppnaTjanst={oppnaTjanst} />}
         {sida === 'om' && <Om />}
         {sida === 'projekt' && <Projekt />}
         {sida === 'boka' && <Boka />}
         {sida === 'kontakt' && <Kontakt navigera={navigera} />}
+        {sida === 'tjanst' && (
+          <Tjanst
+            tjanstId={tjanstId}
+            navigera={navigera}
+            oppnaTjanst={oppnaTjanst}
+          />
+        )}
       </main>
 
       <Footer navigera={navigera} />
