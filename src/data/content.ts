@@ -1,5 +1,7 @@
 // All firmainfo samlad på ett ställe – lätt att uppdatera utan att röra komponenterna.
 
+import { bildUrl } from '../lib/storage';
+
 export const foretag = {
   namn: 'Elfdahls',
   undertitel: 'Fin Snickeri',
@@ -53,9 +55,9 @@ export const tjanster: Tjanst[] = [
       'Möbler med kvalitetsmaterial och hög finish. Rejäla stommar och sammansättningar. Till exempel konsollbord, bokhyllor, vägghängda tv-bänkar, vitrinskåp, bord, bänkar och sänggavlar.',
     ],
     bilder: [
-      '/Mobler1.jpeg',
-      '/Mobler3.jpeg',
-      '/Mobler6.jpeg',
+      bildUrl('Mobler1.jpeg'),
+      bildUrl('Mobler3.jpeg'),
+      bildUrl('Mobler6.jpeg'),
     ],
   },
   {
@@ -68,9 +70,9 @@ export const tjanster: Tjanst[] = [
       'Med CNC-programmering och proffsiga underlag har vi tagit fram en serie kök och garderober med inredning som är flexibel och går att bygga utifrån era mått. Vi ritar upp ett gemensamt förslag på ert kök eller era garderober. Utifrån det kan vi använda 3D-ritningarna till att göra underlag med endast några knapptryckningar, och sen är tillverkningen igång på riktigt.',
     ],
     bilder: [
-      '/Kok2.jpeg',
-      '/Kok3.jpeg',
-      '/Kok5.jpg',
+      bildUrl('Kok2.jpeg'),
+      bildUrl('Kok3.jpeg'),
+      bildUrl('Kok5.jpg'),
     ],
   },
   {
@@ -83,9 +85,9 @@ export const tjanster: Tjanst[] = [
       'Vi arbetar med väl kända arkitekter som har helhetslösningar, där vi är med och förverkligar idéer och ritningar till färdig produkt.',
     ],
     bilder: [
-      '/Butik2.jpg',
-      '/Butik8.jpg',
-      '/Butik9.jpg',
+      bildUrl('Butik2.jpg'),
+      bildUrl('Butik8.jpg'),
+      bildUrl('Butik9.jpg'),
     ],
   },
   {
@@ -98,9 +100,9 @@ export const tjanster: Tjanst[] = [
       'Underlag till projekten är en stor förändring och underlättar vår produktion. Vi visualiserar projektet i förväg så att du kan känna dig trygg med varje beslut innan tillverkningen börjar.',
     ],
     bilder: [
-      '/3d1.jpeg',
-      '/3d2.jpeg',
-      '/3d6.jpeg',
+      bildUrl('3d1.jpeg'),
+      bildUrl('3d2.jpeg'),
+      bildUrl('3d6.jpeg'),
     ],
   },
 ];

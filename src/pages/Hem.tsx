@@ -1,4 +1,5 @@
 import { foretag, tjanster } from '../data/content';
+import { bildUrl } from '../lib/storage';
 import Vardekarusell from '../components/Vardekarusell';
 
 interface HemProps {
@@ -6,12 +7,11 @@ interface HemProps {
   oppnaTjanst: (id: string) => void;
 }
 
-// Platshållarbilder per tjänst på startsidan (byt mot deras egna i public/)
 const kortbild: Record<string, string> = {
-  mobler: '/Mobler1.jpeg',
-  kok: '/Kok2.jpeg',
-  butik: '/Butik2.jpg',
-  ritning: '/3d1.jpeg',
+  mobler: bildUrl('Mobler1.jpeg'),
+  kok: bildUrl('Kok2.jpeg'),
+  butik: bildUrl('Butik2.jpg'),
+  ritning: bildUrl('3d1.jpeg'),
 };
 
 export default function Hem({ navigera, oppnaTjanst }: HemProps) {

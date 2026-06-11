@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { projekt } from '../data/content';
+import { bildUrl } from '../lib/storage';
 
 const bildPerKategori: Record<string, string[]> = {
-  Möbler: ['/Mobler1.jpeg', '/Mobler3.jpeg', '/Mobler6.jpeg'],
-  Specialsnickeri: ['/Mobler3.jpeg', '/Mobler6.jpeg'],
-  Garderober: ['/Kok5.jpg', '/Kok3.jpeg'],
-  'Butik & kontor': ['/Butik2.jpg', '/Butik8.jpg', '/Butik9.jpg'],
+  Möbler: [bildUrl('Mobler1.jpeg'), bildUrl('Mobler3.jpeg'), bildUrl('Mobler6.jpeg')],
+  Specialsnickeri: [bildUrl('Mobler3.jpeg'), bildUrl('Mobler6.jpeg')],
+  Garderober: [bildUrl('Kok5.jpg'), bildUrl('Kok3.jpeg')],
+  'Butik & kontor': [bildUrl('Butik2.jpg'), bildUrl('Butik8.jpg'), bildUrl('Butik9.jpg')],
 };
 
 const ordning = ['Möbler', 'Kök & garderober', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];
