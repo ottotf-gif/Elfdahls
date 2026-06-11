@@ -1,4 +1,4 @@
-import { foretag, kontakter, navlankar } from '../data/content';
+import { foretag, kontakter, navlankar, partner } from '../data/content';
 
 interface FooterProps {
   navigera: (sida: string) => void;
@@ -71,12 +71,22 @@ export default function Footer({ navigera }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-2 border-t border-grafit-800 pt-6 text-xs text-ek-200/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-grafit-800 pt-6 text-xs text-ek-200/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {foretag.namn} {foretag.undertitel} ·{' '}
             {foretag.adress.ort}
           </p>
-          <p>Snickeri sedan {foretag.grundat}</p>
+          <p>
+            Drivs av{' '}
+            <a
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-massing-ljus underline-offset-2 transition-colors hover:text-massing hover:underline"
+            >
+              {partner.namn}
+            </a>
+          </p>
         </div>
       </div>
     </footer>
