@@ -8,13 +8,10 @@ interface HemProps {
 
 // Platshållarbilder per tjänst på startsidan (byt mot deras egna i public/)
 const kortbild: Record<string, string> = {
-  mobler:
-    'https://images.unsplash.com/photo-1594224457860-23f5b6a02e8e?auto=format&fit=crop&w=800&q=80',
-  kok: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80',
-  butik:
-    'https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=800&q=80',
-  ritning:
-    'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
+  mobler: '/Mobler1.jpeg',
+  kok: '/Kok1.jpeg',
+  butik: '/Butik1.jpg',
+  ritning: '/3d1.jpeg',
 };
 
 export default function Hem({ navigera, oppnaTjanst }: HemProps) {

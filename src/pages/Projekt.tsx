@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { projekt } from '../data/content';
 
-// Bildplatshållare per kategori – byt mot egna projektbilder i public/projekt/
-const bildPerKategori: Record<string, string> = {
-  Möbler:
-    'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80',
-  Specialsnickeri:
-    'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80',
-  Garderober:
-    'https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=900&q=80',
-  'Butik & kontor':
-    'https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=900&q=80',
+const bildPerKategori: Record<string, string[]> = {
+  Möbler: ['/Mobler1.jpeg', '/Mobler2.jpeg', '/Mobler3.jpeg', '/Mobler4.jpeg', '/Mobler5.jpeg', '/Mobler6.jpeg'],
+  Specialsnickeri: ['/Mobler3.jpeg', '/Mobler5.jpeg'],
+  Garderober: ['/Kok5.jpg', '/Kok7.jpg'],
+  'Butik & kontor': ['/Butik1.jpg', '/Butik2.jpg', '/Butik3.jpg', '/Butik4.jpg', '/Butik5.jpg', '/Butik6.jpg', '/Butik7.jpg', '/Butik8.jpg', '/Butik9.jpg'],
 };
 
 const ordning = ['Möbler', 'Kök & garderober', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];
@@ -85,14 +80,14 @@ export default function Projekt() {
 
                 {/* Projekt i kategorin */}
                 <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-                  {iKategori.map((p) => (
+                  {iKategori.map((p, idx) => (
                     <article
                       key={p.id}
                       className="group overflow-hidden rounded-sm bg-ek-50 shadow-mjuk"
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <img
-                          src={bildPerKategori[p.kategori]}
+                          src={(bildPerKategori[p.kategori] ?? [])[idx % (bildPerKategori[p.kategori]?.length ?? 1)]}
                           alt={p.titel}
                           loading="lazy"
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
