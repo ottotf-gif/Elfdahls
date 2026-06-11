@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,13 +10,39 @@
   }
 
   body {
-    @apply font-sans text-slate-800 bg-white antialiased;
-    font-size: 16px;
-    line-height: 1.6;
+    @apply bg-ek-50 text-grafit-800 font-sans antialiased;
   }
 
-  h1, h2, h3, h4 {
-    @apply font-serif;
-    line-height: 1.2;
+  ::selection {
+    @apply bg-massing/30 text-grafit-900;
   }
+}
+
+@layer components {
+  /* Liten guldlinje som återkommer som "signatur" genom sajten */
+  .signatur-linje {
+    @apply inline-block h-[2px] w-12 bg-massing;
+  }
+
+  .overlinje {
+    @apply text-xs font-medium uppercase tracking-widest2 text-massing-mork;
+  }
+
+  .knapp-primar {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-grafit-900 px-7 py-3.5
+           text-sm font-medium uppercase tracking-widest text-ek-50 transition-all duration-300
+           hover:bg-ek-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-massing;
+  }
+
+  .knapp-sekundar {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-grafit-900/30
+           px-7 py-3.5 text-sm font-medium uppercase tracking-widest text-grafit-900 transition-all
+           duration-300 hover:border-grafit-900 hover:bg-grafit-900 hover:text-ek-50;
+  }
+}
+
+/* Subtil pappersstruktur i bakgrunden – ger värme, undviker platt AI-känsla */
+.papperskorn {
+  background-image: radial-gradient(rgba(80, 60, 40, 0.04) 1px, transparent 1px);
+  background-size: 4px 4px;
 }
