@@ -3,7 +3,7 @@ import Bildgalleri from '../components/Bildgalleri';
 
 interface TjanstProps {
   tjanstId: string;
-  navigera: (sida: string) => void;
+  navigera: (sida: string, scrollTo?: string) => void;
   oppnaTjanst: (id: string) => void;
 }
 
@@ -17,7 +17,7 @@ export default function Tjanst({ tjanstId, navigera, oppnaTjanst }: TjanstProps)
       <section className="bg-grafit-900 pt-36 pb-16">
         <div className="mx-auto max-w-content px-6">
           <button
-            onClick={() => navigera('hem')}
+            onClick={() => navigera('hem', 'tjanster')}
             className="mb-6 text-sm font-medium uppercase tracking-widest text-ek-100/70 transition-colors hover:text-massing-ljus"
           >
             ← Tillbaka

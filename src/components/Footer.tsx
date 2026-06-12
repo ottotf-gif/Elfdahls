@@ -1,7 +1,7 @@
 import { foretag, kontakter, navlankar, partner } from '../data/content';
 
 interface FooterProps {
-  navigera: (sida: string) => void;
+  navigera: (sida: string, scrollTo?: string) => void;
 }
 
 export default function Footer({ navigera }: FooterProps) {

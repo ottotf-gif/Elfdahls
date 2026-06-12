@@ -15,9 +15,19 @@ export default function App() {
   const [tjanstId, setTjanstId] = useState<string>('mobler');
 
   // Enkel routing via state. Scrolla till toppen vid sidbyte.
-  const navigera = (ny: string) => {
+  const navigera = (ny: string, scrollTo?: string) => {
     setSida(ny as Sida);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (scrollTo) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(scrollTo);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+      });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   // Öppna en specifik tjänst (från korten på startsidan)

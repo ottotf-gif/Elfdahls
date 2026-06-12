@@ -3,7 +3,7 @@ import { navlankar } from '../data/content';
 
 interface HeaderProps {
   aktivSida: string;
-  navigera: (sida: string) => void;
+  navigera: (sida: string, scrollTo?: string) => void;
 }
 
 export default function Header({ aktivSida, navigera }: HeaderProps) {

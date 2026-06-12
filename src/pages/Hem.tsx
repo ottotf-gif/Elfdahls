@@ -3,7 +3,7 @@ import { bildUrl } from '../lib/storage';
 import Vardekarusell from '../components/Vardekarusell';
 
 interface HemProps {
-  navigera: (sida: string) => void;
+  navigera: (sida: string, scrollTo?: string) => void;
   oppnaTjanst: (id: string) => void;
 }
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { foretag, kontakter } from '../data/content';
 
 interface KontaktProps {
-  navigera: (sida: string) => void;
+  navigera: (sida: string, scrollTo?: string) => void;
 }
 
 export default function Kontakt({ navigera }: KontaktProps) {
