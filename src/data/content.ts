@@ -116,7 +116,8 @@ export interface Projekt {
   beskrivning: string;
 }
 
-// Hämtade och bearbetade från deras egna inlägg – ger trovärdighet
+// PLATSHALLARE: Dessa projekt ar exempeltexter baserade pa Elfdahls sociala medier.
+// Byt ut mot riktiga projektbeskrivningar fran Urban innan lansering.
 export const projekt: Projekt[] = [
   {
     id: 'vinkallardorr',

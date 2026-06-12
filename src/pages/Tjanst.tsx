@@ -66,10 +66,10 @@ export default function Tjanst({ tjanstId, navigera, oppnaTjanst }: TjanstProps)
               Kontakta oss
             </button>
             <button
-              onClick={() => navigera('kontakt')}
+              onClick={() => navigera('projekt')}
               className="knapp-sekundar border-ek-100/40 text-ek-50 hover:border-ek-50 hover:bg-ek-50 hover:text-grafit-900"
             >
-              Kontakta oss
+              Se vara projekt
             </button>
           </div>
         </div>
