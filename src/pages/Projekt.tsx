@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import { projekt } from '../data/content';
-import { bildUrl } from '../lib/storage';
 
-const bildPerKategori: Record<string, string[]> = {
-  Möbler: [bildUrl('Mobler1.jpeg'), bildUrl('Mobler3.jpeg'), bildUrl('Mobler6.jpeg')],
-  Specialsnickeri: [bildUrl('Mobler3.jpeg'), bildUrl('Mobler6.jpeg')],
-  Garderober: [bildUrl('Kok5.jpg'), bildUrl('Kok3.jpeg')],
-  'Butik & kontor': [bildUrl('Butik2.jpg'), bildUrl('Butik8.jpg'), bildUrl('Butik9.jpg')],
-};
+const ordning = ['Möbler', 'Kök', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];
 
-const ordning = ['Möbler', 'Kök & garderober', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];
-
-const kategorier = ['Alla', ...Array.from(new Set(projekt.map((p) => p.kategori)))];
+const kategorier = ['Alla', ...Array.from(new Set(projekt.map((p) => p.kategori))).sort(
+  (a, b) => ordning.indexOf(a) - ordning.indexOf(b)
+)];
 
 export default function Projekt() {
   const [filter, setFilter] = useState('Alla');
@@ -88,7 +82,7 @@ export default function Projekt() {
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <img
-                          src={(bildPerKategori[p.kategori] ?? [])[idx % (bildPerKategori[p.kategori]?.length ?? 1)]}
+                          src={p.bild}
                           alt={p.titel}
                           loading="lazy"
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

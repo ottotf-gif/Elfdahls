@@ -114,6 +114,7 @@ export interface Projekt {
   kategori: string;
   ar: number;
   beskrivning: string;
+  bild: string;
 }
 
 // PLATSHALLARE: Dessa projekt ar exempeltexter baserade pa Elfdahls sociala medier.
@@ -126,14 +127,16 @@ export const projekt: Projekt[] = [
     kategori: 'Specialsnickeri',
     ar: 2024,
     beskrivning: 'En fin isolerad vinkällardörr, allt från skiss till montering.',
+    bild: '/Mobler6.jpeg',
   },
   {
     id: 'garderob-kivik',
-    titel: 'Platsbyggd garderob',
+    titel: 'Platsbyggt kök',
     plats: 'Kivik, Skåne',
-    kategori: 'Garderober',
+    kategori: 'Kök',
     ar: 2024,
-    beskrivning: 'Monterad garderob anpassad efter rummets vinklar och tak.',
+    beskrivning: 'Platsbyggt kök med köksö, öppna hyllor och marmorbänkskiva.',
+    bild: '/Kok5.jpg',
   },
   {
     id: 'vildmarkshotell',
@@ -142,46 +145,52 @@ export const projekt: Projekt[] = [
     kategori: 'Butik & kontor',
     ar: 2023,
     beskrivning: 'Närproducerad inredning byggd på plats till vildmarkshotellet.',
+    bild: '/Butik2.jpg',
   },
   {
     id: 'disk-skinn-metall',
-    titel: 'Disk i skinn & metall',
+    titel: 'Butiksinredning med växtvägg',
     plats: 'Butiksprojekt',
     kategori: 'Butik & kontor',
     ar: 2023,
-    beskrivning: 'En liten disk i skinn och metall – materialmöten som kräver precision.',
+    beskrivning: 'Butiksinredning med klädställningar och integrerad växtvägg.',
+    bild: '/Butik8.jpg',
   },
   {
     id: 'gastrumsgarderob',
-    titel: 'Garderob i gästrum',
+    titel: 'Garderob med belysning',
     plats: 'Privatbostad',
     kategori: 'Garderober',
     ar: 2023,
-    beskrivning: 'En liten garderob i gästrum, måttanpassad in i minsta detalj.',
+    beskrivning: 'Mörk platsbyggd garderob med integrerade spotlights och bänkskiva.',
+    bild: '/Kok3.jpeg',
   },
   {
     id: 'hotellrum-sthlm',
-    titel: 'Rum på hotell',
+    titel: 'Skyltlösning butik',
     plats: 'Stockholm',
     kategori: 'Butik & kontor',
     ar: 2022,
-    beskrivning: 'Nya rum på ett lite finare hotell – fast inredning och möbler.',
-  },
-  {
-    id: 'tv-bank-ek',
-    titel: 'Vägghängd tv-bänk i ek',
-    plats: 'Privatbostad',
-    kategori: 'Möbler',
-    ar: 2023,
-    beskrivning: 'Vägghängd tv-bänk med lådor, byggd i massiv ek med hög finish.',
+    beskrivning: 'Specialbyggd skyltlösning med integrerad belysning för butik.',
+    bild: '/Butik9.jpg',
   },
   {
     id: 'vitrinskap',
     titel: 'Vitrinskåp med belysning',
     plats: 'Privatbostad',
     kategori: 'Möbler',
+    ar: 2023,
+    beskrivning: 'Platsbyggt vitrinskåp i mörkt trä med glasdörrar och ek-bänkskiva.',
+    bild: '/Mobler1.jpeg',
+  },
+  {
+    id: 'tv-bank-ek',
+    titel: 'Väggfast förvaring',
+    plats: 'Privatbostad',
+    kategori: 'Möbler',
     ar: 2022,
-    beskrivning: 'Platsbyggt vitrinskåp med glasdörrar och integrerad belysning.',
+    beskrivning: 'Heltäckande förvaringslösning byggd vägg till vägg i mörkt utförande.',
+    bild: '/Mobler3.jpeg',
   },
 ];
 
