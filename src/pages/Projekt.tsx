@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import { projekt } from '../data/content';
 
-// Bildplatshållare per kategori – byt mot egna projektbilder i public/projekt/
+// Riktiga bilder i public/ – en representativ bild per kategori
 const bildPerKategori: Record<string, string> = {
-  Möbler:
-    'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80',
-  Specialsnickeri:
-    'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80',
-  Garderober:
-    'https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=900&q=80',
-  'Butik & kontor':
-    'https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=900&q=80',
+  Möbler: '/Mobler3.jpeg',
+  'Kök & garderober': '/Kok3.jpeg',
+  Garderober: '/Kok5.jpg',
+  'Butik & kontor': '/Butik8.jpg',
+  Specialsnickeri: '/Mobler6.jpeg',
 };
 
 const ordning = ['Möbler', 'Kök & garderober', 'Garderober', 'Butik & kontor', 'Specialsnickeri'];
